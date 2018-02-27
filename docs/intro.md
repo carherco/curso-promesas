@@ -1,7 +1,9 @@
 Promesas
 ========
 
-Las promesas son objetos que se utilizan para conseguir asincronía en un lenguaje de progración síncrono. Una promesa representa un valor que puede estar disponible ahora, en el futuro, o nunca.
+Las promesas son objetos que se utilizan para conseguir asincronía en un lenguaje de progración síncrono. 
+
+Una promesa representa un valor que puede estar disponible ahora, en el futuro, o nunca.
 
 
 Sintaxis
@@ -24,8 +26,8 @@ Parámetros:
 El único parámetro de una promesa es la función ejecutora
 
 - Función ejecutora
-Una función con los argumentos resolver y rechazar. La función ejecutor es ejecutada inmediatamente por la implementación de la Promesa, pasándole las funciones resolver y rechazar (el ejecutor es llamado incluso antes de que el constructor de la Promesa devuelva el objeto creado). Las funciones resolver y rechazar, al ser llamadas, resuelven o rechazan la promesa, respectivamente. Normalmente el ejecutor inicia un trabajo asíncrono, y luego, una vez que es completado, llama a la función resolver para resolver la promesa o la rechaza si ha ocurrido un error.
-Si un error es lanzado en la función ejecutor, la promesa es rechazada y el valor de retorno del ejecutor es rechazado.
+Una función con los argumentos resolver y rechazar. La función ejecutora es ejecutada inmediatamente por la implementación de la Promesa, pasándole las funciones resolver y rechazar (el ejecutor es llamado incluso antes de que el constructor de la Promesa devuelva el objeto creado). Las funciones resolver y rechazar, al ser llamadas, resuelven o rechazan la promesa, respectivamente. Normalmente la función ejecutor inicia un trabajo asíncrono, y luego, una vez que es completado, llama a la función resolver para resolver la promesa o la rechaza si ha ocurrido un error.
+Si un error es lanzado en la función ejecutora, la promesa es rechazada y el valor de retorno del ejecutor es rechazado.
 
 Volvamos a la definición: 
 
@@ -150,7 +152,9 @@ if ("Promise" in window) {
 
 
 
-Una Promesa (Promise) es un objeto que representa la terminación o el fracaso eventual de una operación asíncrona. Una promesa puede ser creada usando su constructor. Sin embargo, la mayoría de la gente son consumidores de promesas ya creadas devueltas desde funciones. Esta guía explorará por lo tanto la consumición (el uso) de promesas devueltas primero.
+Una Promesa (Promise) es un objeto que representa la terminación con éxito o el fracaso eventual de una operación asíncrona. 
+
+Una promesa puede ser creada usando su constructor. Sin embargo, la mayoría de la gente son consumidores de promesas ya creadas devueltas desde funciones. Esta guía explorará por lo tanto la consumición (el uso) de promesas devueltas primero.
 
 Esencialmente, una promesa es un objeto devuelto al cual enganchas las funciones callback, en vez de pasar funciones callback a una función.
 
