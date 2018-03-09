@@ -105,14 +105,12 @@ function testPromise() {
     log.insertAdjacentHTML('beforeend', thisPromiseCount +
         ') Code Started (<small>Empieza el código síncrono</small>)<br/>');
 
-    // We make a new promise: we promise a numeric count of this promise, starting from 1 (after waiting 3s)
     let p1 = new Promise(
-        // The resolver function is called with the ability to resolve or
-        // reject the promise
+
        (resolve, reject) => {
             log.insertAdjacentHTML('beforeend', thisPromiseCount +
                 ') Promise started (<small>Empieza el código asíncrono</small>)<br/>');
-            // This is only an example to create asynchronism
+
             window.setTimeout(
                 function() {
                     // We fulfill the promise !
@@ -121,8 +119,6 @@ function testPromise() {
         }
     );
 
-    // We define what to do when the promise is resolved with the then() call,
-    // and what to do when the promise is rejected with the catch() call
     p1.then(
         // Log the fulfillment value
         function(val) {

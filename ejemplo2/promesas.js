@@ -14,13 +14,13 @@ function testPromise() {
         // reject the promise
        (resolve, reject) => {
             log.insertAdjacentHTML('beforeend', thisPromiseCount +
-                ') Promise started (<small>Empieza el código asíncrono</small>)<br/>');
+                ') Dentro de la promesa, antes del timeout (<small>Empieza el código asíncrono</small>)<br/>');
             // This is only an example to create asynchronism
             window.setTimeout(
                 function() {
                     // We fulfill the promise !
                     resolve(thisPromiseCount);
-                }, Math.random() * 2000 + 1000);
+                }, Math.random() * 4000 + 1000);
         }
     );
 
@@ -30,7 +30,7 @@ function testPromise() {
         // Log the fulfillment value
         function(val) {
             log.insertAdjacentHTML('beforeend', val +
-                ') Promise fulfilled (<small>Código asíncrono terminado</small>)<br/>');
+                ') Código dentro del then (<small>Código asíncrono terminado</small>)<br/>');
         })
     .catch(
         // Log the rejection reason
@@ -39,7 +39,7 @@ function testPromise() {
         });
 
     log.insertAdjacentHTML('beforeend', thisPromiseCount +
-        ') Promise hecha (<small>Código síncrono terminado</small>)<br/>');
+        ') Código debajo del then (<small>Código síncrono terminado</small>)<br/>');
 }
 
 $( document ).ready(function() {
