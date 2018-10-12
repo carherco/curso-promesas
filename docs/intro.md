@@ -148,14 +148,23 @@ if ("Promise" in window) {
 
 
 
-Una Promesa (Promise) es un objeto que representa la terminación con éxito o el fracaso eventual de una operación asíncrona. 
+API Promise
+-----------
 
-Una promesa puede ser creada usando su constructor. Sin embargo, la mayoría de la gente son consumidores de promesas ya creadas devueltas desde funciones. Esta guía explorará por lo tanto la consumición (el uso) de promesas devueltas primero.
+- class Promise
+- static function resolve()
+- static function reject()
+- then()
+- catch()
+- finally()
+- all()
+- race()
 
-Esencialmente, una promesa es un objeto devuelto al cual enganchas las funciones callback, en vez de pasar funciones callback a una función.
+Enlaces de interés:
 
-Por ejemplo, en vez de una función del viejo estilo que espera dos funciones callback, y llama a una de ellas en caso de terminación o fallo:
+https://developer.mozilla.org/es/docs/Web/JavaScript/Referencia/Objetos_globales/Promise
 
+https://promisesaplus.com/
 
 
 

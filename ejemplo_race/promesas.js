@@ -29,7 +29,7 @@ $( document ).ready(function() {
     });
 
     var p5 = new Promise( (resolve, reject) => { 
-        setTimeout(resolve, 500, "cinoc"); 
+        setTimeout(resolve, 500, "cinco"); 
     });
     var p6 = new Promise( (resolve, reject) => { 
         setTimeout(reject, 100, "seis");

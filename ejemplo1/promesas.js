@@ -12,5 +12,6 @@ $( document ).ready(function() {
     });
   } else {
     alert("Tu navegador no soporta Promesas.");
-  }    
+  }
+  console.log('otro código');  
 });
